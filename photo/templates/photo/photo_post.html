@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Photo App</title>
+    </head>
+    <body>
+        <h1><a href="/">홈으로 돌아가기</a></h1>
+            <section>
+            <div>
+                <h2>New Photo</h2>
+                <form method="POST"><!--게시물 작성이므로 method는 POST-->
+                    {% csrf_token %} {{ form.as_p }} <!--form을 받을거면 csrf_token 추가하기-->
+                    <button type="submit">완료!</button>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
